@@ -1,0 +1,15 @@
+{
+  "name": "SpaceBall.Core.Tests",
+  "rootNamespace": "SpaceBall.Tests",
+  "references": [
+    "SpaceBall.Core"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": false,
+  "noEngineReferences": true
+}

@@ -1,0 +1,21 @@
+app:
+  name: "星轨重构"
+  slogan: "重构星轨，点燃深空。"
+  description: "《星轨重构》是一款为 PICO Shared Space 打造的桌面空间解谜游戏。拼装轨道、转动机关，为能源球规划一条穿越中继、绕月折返、抵达空间站的航线。方向、高差与目标顺序，都会改变路线的答案。\n\n游戏包含六段航程，从点亮第一座中继，到完成交叉、高低接驳、供能与归航挑战。观察能源球真实滚动与反弹，结合路线提示、轨迹回看和快速重试，在一次次试射中完善设计。\n\n点选、安放、旋转三维轨段，让零散的零件连成完整航道，把一座微型航天装置带进你的现实空间。"
+  tags: ["空间解谜", "轨道拼装", "太空", "物理"]
+  category: "game"
+  icon: "VibeLabAssets/icon.png"
+  landscape: "VibeLabAssets/detail-1.png"
+  detail_images: ["VibeLabAssets/detail-1.png", "VibeLabAssets/detail-2.png", "VibeLabAssets/detail-3.png"]
+  videos: []
+version:
+  name: "0.4.4"
+  notes: "首次提交《星轨重构》：六关空间路线谜题、三维轨段拼装、绕月折返与供能机关，包含当前太空装置美术和能源接驳演出。"
+build:
+  repo_url: "https://github.com/yangel-yan/OrbitalForge-Spatial"
+  repo_visibility: "public"
+  tech_stack: "unity"
+  ai_tool: "Codex"
+  ai_model: "GPT-6"
+  features: ["none"]
+  teammates: []

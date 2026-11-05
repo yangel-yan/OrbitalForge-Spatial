@@ -1,0 +1,44 @@
+{
+  "sourcePage": "https://svs.gsfc.nasa.gov/4720/",
+  "sourceDemUnits": "km relative to a 1737.4 km sphere",
+  "sourceDemMinMaxKm": [
+    -8.878499984741211,
+    10.504000663757324
+  ],
+  "heightEncoding": "uint16 = R*256+G; km=uint16/65535*24-12; B=0",
+  "geometryReliefMultiplier": 2.0,
+  "albedoSize": [
+    2048,
+    1024
+  ],
+  "normalSize": [
+    1440,
+    720
+  ],
+  "heightSize": [
+    720,
+    360
+  ],
+  "files": {
+    "lroc_color_2k.jpg": {
+      "bytes": 457942,
+      "sha256": "f7130a1822681fa7512d7dcfd40db8c10b9ba4f06777910348698260ed7a2170"
+    },
+    "ldem_4.tif": {
+      "bytes": 4153352,
+      "sha256": "330afa2556a86fd05ac6ba2f912f246600fdade35de2a0d90593d50d07b01b65"
+    },
+    "Moon_Albedo_2k.jpg": {
+      "bytes": 457942,
+      "sha256": "f7130a1822681fa7512d7dcfd40db8c10b9ba4f06777910348698260ed7a2170"
+    },
+    "Moon_Height_RG16.png": {
+      "bytes": 500198,
+      "sha256": "2ffcf350697bd89c338414ef857c830d2ee74f25875e4017b7d2d9b648fc8b53"
+    },
+    "Moon_Normal_LOLA.png": {
+      "bytes": 1814855,
+      "sha256": "87f28fde77a225af23ce6958cd4c951a36f389222f4befaabb37be42cc07adf9"
+    }
+  }
+}

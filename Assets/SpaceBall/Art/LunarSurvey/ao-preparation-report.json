@@ -1,0 +1,66 @@
+{
+  "sourcePage": "https://svs.gsfc.nasa.gov/4720/",
+  "sourceFile": "Source~/ldem_4.tif",
+  "sourceSha256": "330afa2556a86fd05ac6ba2f912f246600fdade35de2a0d90593d50d07b01b65",
+  "sourceDemUnits": "kilometers relative to radius 1737.4 km",
+  "sourceDemRangeKm": [
+    -8.878499984741211,
+    10.504000663757324
+  ],
+  "radiusKm": 1737.4,
+  "reliefMultiplier": 2.0,
+  "size": [
+    720,
+    360
+  ],
+  "azimuths": 24,
+  "sampleDistancesKm": [
+    7.5,
+    15.0,
+    22.5,
+    30.0,
+    45.0,
+    60.0,
+    90.0,
+    120.0,
+    180.0,
+    240.0
+  ],
+  "geodesicSamplesPerTexel": 240,
+  "method": "Finite-distance great-circle terrain horizons, exact spherical curvature projection, cosine-weighted sky visibility normalized against the local DEM normal's radial hemisphere",
+  "rawAoRange": [
+    0.6760439070078291,
+    1.0
+  ],
+  "rawAoMean": 0.9948882474925569,
+  "artRemap": {
+    "formula": "AO=clamp(1-0.55*sqrt(1-rawAO),0.78,1)",
+    "poleHandling": "3-degree row-mean fade; each terminal row constant"
+  },
+  "aoRangeQuantized": [
+    0.7803921568627451,
+    1.0
+  ],
+  "aoPercentile01": 0.8862745098039215,
+  "aoPercentile05": 0.9137254901960784,
+  "aoMedian": 0.9803921568627451,
+  "aoMean": 0.9719191781650932,
+  "fullWhiteFraction": 0.10526234567901234,
+  "pixelsAtFloorFraction": 7.71604938271605e-06,
+  "maximumTerrainHorizonDegrees": 47.26245865529513,
+  "poleRowPeakToPeakBytes": [
+    0,
+    0
+  ],
+  "longitudeEdgeMeanDifferenceBytes": 3.6666666666666665,
+  "equalRgbChannels": true,
+  "usesAlbedo": false,
+  "usesDirectionalLight": false,
+  "output": {
+    "file": "Moon_AO_LOLA.png",
+    "bytes": 189926,
+    "sha256": "65209ee917be40afa84446507aa82dab98a4615312a4d3255371d8728ccd8a31"
+  },
+  "limits": "Sampled artistic AO estimate, not physical lunar illumination or proof of native rendering. No sub-grid detail, multiple scattering, or shadows from artificial scene structures are included.",
+  "import": "Default texture; sRGB=false; U Repeat; V Clamp; npotScale=None. Identical RGB permits URP-G and glTF-R occlusion sampling."
+}
