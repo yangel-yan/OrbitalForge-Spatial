@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: -292094107, guid: a2005d26a7dfb4db3952cf9ed3794675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ByteDance.PICO.SpatialAdapter.Runtime.dll::ByteDance.PICO.SpatialAdapter.PrefabId
-  m_prefabId: 272520
+  m_prefabId: 101608
 --- !u!114 &5656295241247925756
 MonoBehaviour:
   m_ObjectHideFlags: 0

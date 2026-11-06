@@ -31,6 +31,87 @@ namespace SpaceBall.Editor
             Build();
         }
 
+        [MenuItem("SpaceBall/Export Shared Space Gradle for VibeLab")]
+        public static void ExportForVibeLabFromMenu()
+        {
+            ExportForVibeLab();
+        }
+
+        public static string ExportForVibeLab()
+        {
+            if (EditorApplication.isPlayingOrWillChangePlaymode || BuildPipeline.isBuildingPlayer)
+                throw new InvalidOperationException("Exit Play mode and finish the current build before exporting.");
+            if (EditorUserBuildSettings.activeBuildTarget != BuildTarget.Android)
+                throw new InvalidOperationException("Select Android before exporting the Shared Space application.");
+            if (PlayerSettings.GetScriptingBackend(NamedBuildTarget.Android) != ScriptingImplementation.IL2CPP ||
+                PlayerSettings.Android.targetArchitectures != AndroidArchitecture.ARM64)
+                throw new InvalidOperationException("The Shared Space export requires IL2CPP and ARM64 only.");
+
+            var runtimeSettings = AssetDatabase.LoadAssetAtPath<SpatialAdapterRuntimeSettings>(
+                SpatialAdapterRuntimeSettings.k_SettingsPath);
+            var serializedSettings = new SerializedObject(runtimeSettings);
+            var cameraConfiguration = serializedSettings.FindProperty("m_defaultSpatialCameraConfiguration").objectReferenceValue;
+            if (!serializedSettings.FindProperty("m_enableSpatialAdapter").boolValue ||
+                Array.IndexOf(PlayerSettings.GetScriptingDefineSymbols(NamedBuildTarget.Android).Split(';'), "PICO_MS_SDK") < 0 ||
+                AssetDatabase.GetAssetPath(cameraConfiguration) != "Assets/SpaceBall/Scenes/Orbital_SharedSpace.asset" ||
+                new SerializedObject(cameraConfiguration).FindProperty("mode").intValue != 0)
+                throw new InvalidOperationException("The VibeLab export must retain this game's Shared Space Spatial Adapter configuration.");
+
+            OrbitalBranding.Apply();
+            string projectRoot = Directory.GetParent(Application.dataPath).FullName;
+            string outputPath = Path.Combine(projectRoot, "Builds", "SpaceBall", "VibeLab-Gradle");
+            string reportPath = Path.Combine(projectRoot, "Builds", "SpaceBall", "vibelab-export-report.json");
+            Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
+            bool previousExport = EditorUserBuildSettings.exportAsGoogleAndroidProject;
+            bool previousBundle = EditorUserBuildSettings.buildAppBundle;
+            BuildReport report;
+            try
+            {
+                PrepareSpatialBuild(projectRoot);
+                EditorUserBuildSettings.exportAsGoogleAndroidProject = true;
+                EditorUserBuildSettings.buildAppBundle = false;
+                using (new SpatialBundleCompatibilityScope())
+                    report = BuildPipeline.BuildPlayer(new BuildPlayerOptions
+                    {
+                        scenes = new[] { PrototypeScenePath },
+                        locationPathName = outputPath,
+                        target = BuildTarget.Android,
+                        options = BuildOptions.None
+                    });
+            }
+            finally
+            {
+                EditorUserBuildSettings.exportAsGoogleAndroidProject = previousExport;
+                EditorUserBuildSettings.buildAppBundle = previousBundle;
+            }
+
+            var summary = report.summary;
+            var errors = CollectBuildErrors(report);
+            WriteReport(reportPath, new LocalBuildReport
+            {
+                output = outputPath,
+                applicationIdentifier = PlayerSettings.GetApplicationIdentifier(NamedBuildTarget.Android),
+                status = summary.result.ToString(),
+                summary = new LocalBuildSummary
+                {
+                    buildSeconds = summary.totalTime.TotalSeconds,
+                    totalErrors = summary.totalErrors,
+                    totalWarnings = summary.totalWarnings,
+                    sizeBytes = summary.totalSize
+                },
+                errors = errors.ToArray()
+            });
+            if (summary.result != BuildResult.Succeeded || summary.totalErrors != 0)
+                throw new BuildFailedException("Shared Space Gradle export failed: " + string.Join("\n", errors));
+            // The Spatial Adapter library manifest also uses app_name and app_icon.
+            // Root assembleRelease verifies the library as well as the launcher APK.
+            string libraryGradle = Path.Combine(outputPath, "unityLibrary", "build.gradle");
+            const string sharedResources = "android.sourceSets.main.res.srcDir(rootProject.file('launcher/src/main/res'))";
+            if (!File.ReadAllText(libraryGradle).Contains(sharedResources))
+                File.AppendAllText(libraryGradle, "\n" + sharedResources + "\n", new UTF8Encoding(false));
+            return outputPath;
+        }
+
         public static string Build()
         {
             if (EditorApplication.isPlayingOrWillChangePlaymode)

@@ -1,0 +1,81 @@
+apply plugin: 'com.android.library'
+apply from: '../shared/keepUnitySymbols.gradle'
+apply from: '../shared/common.gradle'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation(name: 'SpatialAdapterBackend', ext:'aar')
+    implementation(name: 'tobservicelib-release', ext:'aar')
+    implementation(name: 'platformloader', ext:'aar')
+    implementation(name: 'StagePlatform', ext:'aar')
+    implementation(name: 'tob_api-release', ext:'aar')
+    implementation(name: 'capturelib-release', ext:'aar')
+    implementation(name: 'LoaderForUnitySDK', ext:'aar')
+    implementation(name: 'CameraRenderingPlugin', ext:'aar')
+    implementation project(':unityLibrary:xrmanifest.androidlib')
+}
+
+android {
+    namespace "com.unity3d.player"
+    ndkVersion "27.2.12479018"
+    compileSdk 36
+    buildToolsVersion "36.0.0"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    defaultConfig {
+        consumerProguardFiles "proguard-unity.txt"
+        minSdk 29
+        targetSdk 36
+
+        ndk {
+            abiFilters "arm64-v8a"
+            debugSymbolLevel "none"
+        }
+    }
+
+    lint {
+        abortOnError false
+    }
+
+    androidResources {
+        ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~"
+        noCompress = ['.unity3d', '.ress', '.resource', '.obb', '.bundle', '.unityexp'] + unityStreamingAssets.tokenize(', ')
+    }
+
+    packaging {
+        jniLibs {
+            useLegacyPackaging true
+        }
+    }
+}
+
+
+tasks.register('buildIl2Cpp') {}
+tasks.named('buildIl2Cpp').configure { enabled = false }
+
+android {
+   sourceSets {
+       main {
+           jni.srcDirs = []
+           res.srcDirs += rootProject.file('launcher/src/main/res')
+       }
+   }
+}
+
+androidComponents {
+    onVariants(selector().all()) { variant ->
+        tasks.configureEach { task ->
+            def mergeTaskName = "merge${variant.name.capitalize()}JniLibFolders";
+            if (task.name == mergeTaskName) {
+                dependsOn buildIl2Cpp
+            }
+        }
+    }
+}
+
+// Native inputs are the already verified final Release APK bytes.
+android.packaging.jniLibs.keepDebugSymbols.add('**/*.so')

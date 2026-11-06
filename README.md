@@ -61,6 +61,22 @@
 
 ## 构建 APK
 
+VibeLab 使用仓库根目录的 Android Gradle 工程。它包含本次 Release 导出的预编译 ARM64
+代码与 Spatial 资源，不需要在云端运行 Unity、Node 或 Spatial Editor：
+
+```powershell
+./gradlew.bat --no-daemon assembleRelease
+```
+
+macOS / Linux 使用 `./gradlew --no-daemon assembleRelease`。需要 Java 17 和 Android SDK 36；
+wrapper 固定为 Gradle 9.3.1。APK 输出在 `launcher/build/outputs/apk/release/launcher-release.apk`。
+包名为 `com.yangel.orbitalforge`。
+
+修改 Unity 玩法、场景或资源后，须先重新导出并验证，再更新这些 Android 输入。
+详见 [Shared Space 导出流程](Docs/VibeLab-SharedSpace-Export-2026-11-06.md)。
+
+以下原 Unity 菜单用于本机 Development 验证包：
+
 退出 Play 模式后，使用 Unity 菜单：
 
 ```text

@@ -13,3 +13,12 @@
 *.otf binary
 *.ttf binary
 *.wav binary
+gradlew text eol=lf
+gradlew.bat text eol=crlf
+*.so binary
+*.aar binary
+*.jar binary
+*.bundle binary
+unityLibrary/src/main/assets/** binary
+unityLibrary/src/main/jniLibs/** binary
+unityLibrary/libs/** binary

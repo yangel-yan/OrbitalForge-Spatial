@@ -1,0 +1,392 @@
+{
+  "schema": 1,
+  "processor_revision": "orbital-shared-space-method-b-v2-final-native-bytes",
+  "route": "PICO Shared Space / Spatial Adapter",
+  "generated_at": "2026-11-06T03:01:26.842940+00:00",
+  "unity_version": "6000.3.25f1",
+  "unity_template_version": "22",
+  "ndk_version": "27.2.12479018",
+  "abi": [
+    "arm64-v8a"
+  ],
+  "target_sdk": 36,
+  "application_id": "com.yangel.orbitalforge",
+  "version_name": "0.4.4",
+  "version_code": 8,
+  "il2cpp_so_sha256": "c4f50e68b1cd69705d04d2c90d8caca2eda8b8b8b228cca16d3734d7d125a01a",
+  "global_metadata_sha256": "ce3d577d03c4218dee3fdc7931117055cbdc1deaa3c47a22a630441bc688cbbe",
+  "native_byte_source": "Final bytes from the verified baseline Release APK; packaging is configured to preserve them without another strip pass.",
+  "native_inventory": [
+    {
+      "name": "lib_burst_generated.so",
+      "size": 433760,
+      "sha256": "e8f32651049702ee52e5ceb61591eed1e598407706b7eba560ab4d2c1e300a65"
+    },
+    {
+      "name": "libil2cpp.so",
+      "size": 74831800,
+      "sha256": "c4f50e68b1cd69705d04d2c90d8caca2eda8b8b8b228cca16d3734d7d125a01a"
+    },
+    {
+      "name": "libmain.so",
+      "size": 6696,
+      "sha256": "8c63eeda160250bc1e8a882a2f9298514a2d8a3a718e5cd0fa4f8150fae7a68b"
+    },
+    {
+      "name": "libPicoAmbisonicDecoder.so",
+      "size": 2685736,
+      "sha256": "6d52d4ddd2422a4fb4cf1b76bcd6edaf087a9606dabc7c14e95fb1d99512cbd4"
+    },
+    {
+      "name": "libPicoAudioRouter.so",
+      "size": 186496,
+      "sha256": "639d5a2f851760896f4638ef0c8e0b3e05e6c01552148deebedb92c00fe09673"
+    },
+    {
+      "name": "libPicoAudioSDKUnityNativePlugin.so",
+      "size": 8117544,
+      "sha256": "e5d04e7a51d2248c0ba54d4bb4b8c11230c139ab56c4f037cd8181a07fef5167"
+    },
+    {
+      "name": "libunity.so",
+      "size": 22842080,
+      "sha256": "67995e28819b35637a922e837def425c8781af1fc120b5e1f016548b966c4139"
+    },
+    {
+      "name": "libUnityOpenXRHands.so",
+      "size": 198680,
+      "sha256": "924d3d3ea553b71240eb998b660d4568dde1ca16afd9c39608ffbd25ba96fc16"
+    }
+  ],
+  "raw_source_native_inventory": [
+    {
+      "name": "lib_burst_generated.so",
+      "size": 620144,
+      "sha256": "0c23d3cdebf3e2db3e8a38c498f7e9695284ad333f71950b6cb7f35aec762702"
+    },
+    {
+      "name": "libil2cpp.so",
+      "size": 74831800,
+      "sha256": "c4f50e68b1cd69705d04d2c90d8caca2eda8b8b8b228cca16d3734d7d125a01a"
+    },
+    {
+      "name": "libmain.so",
+      "size": 6696,
+      "sha256": "8c63eeda160250bc1e8a882a2f9298514a2d8a3a718e5cd0fa4f8150fae7a68b"
+    },
+    {
+      "name": "libPicoAmbisonicDecoder.so",
+      "size": 2685736,
+      "sha256": "a90306834e8200e419b8786944b112129e2193b302544bc8b2ea6df340dcb8d4"
+    },
+    {
+      "name": "libPicoAudioRouter.so",
+      "size": 186496,
+      "sha256": "8815989163d1b09f78c575eea7b8e0646d13ec4a81fa36ba6d565907b5153869"
+    },
+    {
+      "name": "libPicoAudioSDKUnityNativePlugin.so",
+      "size": 8117544,
+      "sha256": "347d5f94c94774e181ab1649257c36e2169c6e786342da6a3041bd3e16172449"
+    },
+    {
+      "name": "libunity.so",
+      "size": 22842080,
+      "sha256": "67995e28819b35637a922e837def425c8781af1fc120b5e1f016548b966c4139"
+    },
+    {
+      "name": "libUnityOpenXRHands.so",
+      "size": 198680,
+      "sha256": "7436a2d6369ee0efa7a56b490c9d90510a5824768a2cc7c185c0ed15ff74b87d"
+    }
+  ],
+  "baseline_apk_native_inventory": {
+    "lib/arm64-v8a/libCameraRenderingPlugin.so": {
+      "size": 319712,
+      "sha256": "3f2b76ba8329e6b720d2bee727c7ad7074ed036585881db48243462179df0b4d"
+    },
+    "lib/arm64-v8a/libPICO_TOBAPI.so": {
+      "size": 11304,
+      "sha256": "5126d5eb886da947b056603cc61c2a3407ed646d2e5188c2976038c737033876"
+    },
+    "lib/arm64-v8a/libPicoAmbisonicDecoder.so": {
+      "size": 2685736,
+      "sha256": "6d52d4ddd2422a4fb4cf1b76bcd6edaf087a9606dabc7c14e95fb1d99512cbd4"
+    },
+    "lib/arm64-v8a/libPicoAudioRouter.so": {
+      "size": 186496,
+      "sha256": "639d5a2f851760896f4638ef0c8e0b3e05e6c01552148deebedb92c00fe09673"
+    },
+    "lib/arm64-v8a/libPicoAudioSDKUnityNativePlugin.so": {
+      "size": 8117544,
+      "sha256": "e5d04e7a51d2248c0ba54d4bb4b8c11230c139ab56c4f037cd8181a07fef5167"
+    },
+    "lib/arm64-v8a/libStagePlatform.so": {
+      "size": 998856,
+      "sha256": "87856299c29fecfb59bd4ea0a39bee073927579370fb8a5eb518ad2bb9538b7f"
+    },
+    "lib/arm64-v8a/libUnityOpenXRHands.so": {
+      "size": 198680,
+      "sha256": "924d3d3ea553b71240eb998b660d4568dde1ca16afd9c39608ffbd25ba96fc16"
+    },
+    "lib/arm64-v8a/lib_burst_generated.so": {
+      "size": 433760,
+      "sha256": "e8f32651049702ee52e5ceb61591eed1e598407706b7eba560ab4d2c1e300a65"
+    },
+    "lib/arm64-v8a/libil2cpp.so": {
+      "size": 74831800,
+      "sha256": "c4f50e68b1cd69705d04d2c90d8caca2eda8b8b8b228cca16d3734d7d125a01a"
+    },
+    "lib/arm64-v8a/libmain.so": {
+      "size": 6696,
+      "sha256": "8c63eeda160250bc1e8a882a2f9298514a2d8a3a718e5cd0fa4f8150fae7a68b"
+    },
+    "lib/arm64-v8a/libopenxr_loader.so": {
+      "size": 714096,
+      "sha256": "77edb9d6581256f6218477d190d68607fbe3de853959404c0b08503bf8832db8"
+    },
+    "lib/arm64-v8a/libpvrcapturelib.so": {
+      "size": 390648,
+      "sha256": "cb51b7078adca197859870a64d5c4046d3dd4bf7bfe48c91f6c5777b50e9308f"
+    },
+    "lib/arm64-v8a/libpxrplatformloader.so": {
+      "size": 264112,
+      "sha256": "2c6c6a8bc4634a59dcc139d18ff846e37aafbcb0fd0682c2ddeee04dd167b165"
+    },
+    "lib/arm64-v8a/libpxrplatformloader4j.so": {
+      "size": 682064,
+      "sha256": "a1bd320a3a89f06ef2176439f57ba94eee4f2cc69755f02c6db14554d7483cf2"
+    },
+    "lib/arm64-v8a/libspatial_pack_loader.so": {
+      "size": 2724504,
+      "sha256": "dd0f4f0aa8576b7fdefc21b870a9924c34d5400ae7a62a0bfed8ebb96688b46d"
+    },
+    "lib/arm64-v8a/libspatialadapter_backend.so": {
+      "size": 1304080,
+      "sha256": "093d88b75cd10b84b06628aebfddf19b5b7c60bc5899b63ded37b314530cf68b"
+    },
+    "lib/arm64-v8a/libtobservice.so": {
+      "size": 367872,
+      "sha256": "6ce9f94da093fd01b15503039974e7248405b0c9e92e2aedf76467e2db315fa8"
+    },
+    "lib/arm64-v8a/libunity.so": {
+      "size": 22842080,
+      "sha256": "67995e28819b35637a922e837def425c8781af1fc120b5e1f016548b966c4139"
+    }
+  },
+  "aar_native_inventory": {
+    "libCameraRenderingPlugin.so": {
+      "aar": "unityLibrary/libs/CameraRenderingPlugin.aar",
+      "size": 319712,
+      "sha256": "3f2b76ba8329e6b720d2bee727c7ad7074ed036585881db48243462179df0b4d"
+    },
+    "libpvrcapturelib.so": {
+      "aar": "unityLibrary/libs/capturelib-release.aar",
+      "size": 390648,
+      "sha256": "cb51b7078adca197859870a64d5c4046d3dd4bf7bfe48c91f6c5777b50e9308f"
+    },
+    "libopenxr_loader.so": {
+      "aar": "unityLibrary/libs/LoaderForUnitySDK.aar",
+      "size": 714096,
+      "sha256": "77edb9d6581256f6218477d190d68607fbe3de853959404c0b08503bf8832db8"
+    },
+    "libpxrplatformloader.so": {
+      "aar": "unityLibrary/libs/platformloader.aar",
+      "size": 264112,
+      "sha256": "2c6c6a8bc4634a59dcc139d18ff846e37aafbcb0fd0682c2ddeee04dd167b165"
+    },
+    "libpxrplatformloader4j.so": {
+      "aar": "unityLibrary/libs/platformloader.aar",
+      "size": 682064,
+      "sha256": "a1bd320a3a89f06ef2176439f57ba94eee4f2cc69755f02c6db14554d7483cf2"
+    },
+    "libspatial_pack_loader.so": {
+      "aar": "unityLibrary/libs/SpatialAdapterBackend.aar",
+      "size": 2724504,
+      "sha256": "dd0f4f0aa8576b7fdefc21b870a9924c34d5400ae7a62a0bfed8ebb96688b46d"
+    },
+    "libspatialadapter_backend.so": {
+      "aar": "unityLibrary/libs/SpatialAdapterBackend.aar",
+      "size": 1304080,
+      "sha256": "093d88b75cd10b84b06628aebfddf19b5b7c60bc5899b63ded37b314530cf68b"
+    },
+    "libStagePlatform.so": {
+      "aar": "unityLibrary/libs/StagePlatform.aar",
+      "size": 998856,
+      "sha256": "87856299c29fecfb59bd4ea0a39bee073927579370fb8a5eb518ad2bb9538b7f"
+    },
+    "libPICO_TOBAPI.so": {
+      "aar": "unityLibrary/libs/tob_api-release.aar",
+      "size": 11304,
+      "sha256": "5126d5eb886da947b056603cc61c2a3407ed646d2e5188c2976038c737033876"
+    },
+    "libtobservice.so": {
+      "aar": "unityLibrary/libs/tobservicelib-release.aar",
+      "size": 367872,
+      "sha256": "6ce9f94da093fd01b15503039974e7248405b0c9e92e2aedf76467e2db315fa8"
+    }
+  },
+  "spatial_asset_inventory": {
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/Scenes/SampleScene.unity.glb": {
+      "size": 736,
+      "sha256": "ded1cf6f1860aa7f78c8e1a2b109c425d7e6533533b7cb3bbb9be7c9e37319a4"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Art/Generated/OrbitalDock.prefab.glb": {
+      "size": 8630796,
+      "sha256": "645249d14cb40ba1b7d5861f4580ee62ac2f34a36a0a37f1282c22ea543ce933"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Fonts/Orbital_Noto_SDF.asset.glb": {
+      "size": 861536,
+      "sha256": "8ee43dd8dd1230f0b40c2c447325a7a0996bd827a744c4dd1628d5914638817d"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/Accent.mat.glb": {
+      "size": 1708,
+      "sha256": "dd20d1c0932a5071f9bf7883aa62c41e460e6ccb5d4e6c93ea901e927fc7d0c2"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/Ceramic.mat.glb": {
+      "size": 1612724,
+      "sha256": "620fecb15fc1762e95fbb76f9b4b3fd80046837750f43c7fa6418abfbd6fa088"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/Dark.mat.glb": {
+      "size": 1704,
+      "sha256": "9fff3cc5c47c11ac727cf786f17d6910d273f2feb22b7d2e998b937e8d4767a6"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/Deck.mat.glb": {
+      "size": 1704,
+      "sha256": "8cac403fc3bac517558f32bec6a3cc28a9e96767547e58a5dc4f12fc396f92a2"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/Energy.mat.glb": {
+      "size": 1724,
+      "sha256": "ea8160fc020d5581bd5ce0397a13d62271bfe0cb139fe9e1808378bd5e34b346"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/Floor.mat.glb": {
+      "size": 1704,
+      "sha256": "4a373f16b45e5da1611253867e0702edcba28299f8f32b762387f48a5f463f65"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/GuideLight.mat.glb": {
+      "size": 1764,
+      "sha256": "b6af4afb3f71170e5cd8cb8d041221e23ed8f8b85c279d8ee29527fb3c7ca4c3"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/Inactive.mat.glb": {
+      "size": 1700,
+      "sha256": "31d079d43d872668cbf14c903fbee250e34e00ad862aa1232874ccbb03be4af6"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/Moon.mat.glb": {
+      "size": 1684,
+      "sha256": "9215c8fac8619b124d045e9573115d71b20e5713f58ebad4ecc96fe610c256f8"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/MoonCrater.mat.glb": {
+      "size": 5655436,
+      "sha256": "cc19a65f91acc6d5df62c205c04fbeb33e3c072913a03458c2edfa0ddd4a0881"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/MoonSurface.mat.glb": {
+      "size": 5655440,
+      "sha256": "84298bc0763d86eabaf71368c40f54f4caae1c71dc73393601445580b1340d6a"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/OrbitalDock_Armor.mat.glb": {
+      "size": 2274396,
+      "sha256": "5894636276ac820c7c6bc0eb984dc7fa73a5c934e9ee3e32851fabd6af0cd053"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/OrbitalDock_Lit.mat.glb": {
+      "size": 5651116,
+      "sha256": "43c60562acf9a56b195a04ad4f7dedb84a61229636825a6a41992731596e5d87"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/Panel.mat.glb": {
+      "size": 1688,
+      "sha256": "4fabb46b7e24868805e58baeb6aa04ec8df2b2d2dde21db378d3af1fe0c57854"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/Rail.mat.glb": {
+      "size": 1684,
+      "sha256": "07335643ae351e73f3741a88dd6263a8cb486608b41c55ebbd5072aab4cf85d9"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/Success.mat.glb": {
+      "size": 1752,
+      "sha256": "1ba91124010b00eb9a8dffac57568257fe4fbae89b2958ccf09042c0535e5ead"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/Titanium.mat.glb": {
+      "size": 1716,
+      "sha256": "37417b295fda297e40f03f1279888a86de48f4b798cd7858c82a40d72cb4ea3e"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/TrackGuard.mat.glb": {
+      "size": 1724,
+      "sha256": "d61f61d5d24fafa77091d17dc5d30271a892157e45c3656aecb32ced824e52d1"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/VFX_Cyan.mat.glb": {
+      "size": 1752,
+      "sha256": "2c393a8d909126875c8abb098f23fe471ef5d2d5fbcd5812b7a335906efa5449"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/VFX_DeepCyan.mat.glb": {
+      "size": 1796,
+      "sha256": "6ac6dbfe1241d1e6548e04a07fd3aaa4930774b4b5a75242cc204bd1424532d6"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/VFX_DimGold.mat.glb": {
+      "size": 1788,
+      "sha256": "f199195f69c20a87dac2fe30142892c080bc4e8c49c3c959822932b29d6de4ec"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/VFX_Gold.mat.glb": {
+      "size": 1752,
+      "sha256": "ada2a99bcce9deff87711a67c19a35fa9fcc3f1ead7812b4966338ec679f92fa"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/VFX_WhiteCore.mat.glb": {
+      "size": 1768,
+      "sha256": "9a3ff7c1cd62a95cb0d21a956f33fea484af26de062412a8ee0adf6d9ccb4c4a"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Materials/White.mat.glb": {
+      "size": 1688,
+      "sha256": "25930fb747413ae89f23f6f4e28896731c2b62f54ef18d02022c47f198a254f1"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/SpaceBall/Scenes/OrbitalCourier_Prototype.unity.glb": {
+      "size": 46468588,
+      "sha256": "c6c57a6d2adb7bd3fd1731fd3a06d326f0ed498387fa2e901afb13494b302810"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat.glb": {
+      "size": 362988,
+      "sha256": "5baf4148cc6cdbe89407428b9dc940b47616189e4dfd9eea3417bed2e248e45c"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset.glb": {
+      "size": 3112,
+      "sha256": "77d8c61ed917acb843dc4386922d58b11d74f57c5621456dfb420ba7862aa465"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat.glb": {
+      "size": 362972,
+      "sha256": "2e708c841f66ddb3ed6cdba7e52fc48b2a04656c5dc62e9af36bc22e8f41b757"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset.glb": {
+      "size": 362960,
+      "sha256": "3926dc2447f474095ea3bf888d35ccbe4a89ba733c2ab62447a42fbdcf997bf8"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.glb": {
+      "size": 185664,
+      "sha256": "9ece3095de2cf3ec2f1b5ebbe538d80832847f2c9fa5eb6ac5e5384f5d78eebd"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/EnabledBuildScenes.txt": {
+      "size": 86,
+      "sha256": "5e03ab5f4d693c146365219d32cece7103474e20c3d002d94cb63876c02fa438"
+    },
+    "unityLibrary/src/main/assets/SpatialAdapterExport/SpatialAssetBundle.bundle": {
+      "size": 38017121,
+      "sha256": "c0b8cd0a4f11861be83aee1ab9f052240f05ceaec754ea4245afb9f4e1d49c1f"
+    }
+  },
+  "source_identity": {
+    "application_id": "com.yangel.orbitalforge",
+    "version_name": "0.4.4",
+    "version_code": 8,
+    "copied_file_count": 472,
+    "copied_file_inventory_sha256": "2eafcfc76d2c68d5af358422f28ac4b0a84310c17521c45786ba785334b3b0a4",
+    "baseline_apk_sha256": "c99fc3a5fd1fe24f80bc4e595a57ca6f4cd5e50c5c5c2cb7364d8ac64e0656ec"
+  },
+  "post_slim_release_build": "succeeded; isolated public dependency resolution with empty Gradle/Maven dependency caches",
+  "validated_apk_sha256": "41adf0173be7edde5d2d453f95de3d93a35a5e11cb85d1d505c579b02899d60a",
+  "validation": {
+    "shared_space": true,
+    "before_after_native_sha256_match": true,
+    "native_library_count": 18,
+    "spatial_file_count": 35,
+    "node_available": false,
+    "il2cpp_compilation_skipped": true,
+    "zipalign": true,
+    "page_size_policy": "warn",
+    "all_libraries_16kb_aligned": false
+  }
+}

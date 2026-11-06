@@ -34,3 +34,10 @@ Assets/Temp/
 Assets/Temp.meta
 Assets/StreamingAssets/SpatialAdapterExport/
 Assets/StreamingAssets/SpatialAdapterExport.meta
+
+/.pico-env.json
+
+
+/.gradle/
+
+**/local.properties
