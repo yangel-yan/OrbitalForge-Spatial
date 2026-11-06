@@ -19,13 +19,13 @@ public class SpatialAdapterPlayerActivity extends UnityPlayerActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-
+        
         Window window = getWindow();
         window.addFlags(
             WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE |
             WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
         );
-
+        
         WindowManager.LayoutParams params = window.getAttributes();
         params.alpha = 0.0f;
         window.setAttributes(params);
@@ -41,7 +41,7 @@ public class SpatialAdapterPlayerActivity extends UnityPlayerActivity
     }
 
     // TODO: Remove the following once transparent apps receive focus events
-
+    
     protected void onResume() {
         super.onResume();
         super.onWindowFocusChanged(true);

@@ -1,7 +1,0 @@
-{
-  "name": "SpaceBall.Core",
-  "rootNamespace": "SpaceBall",
-  "references": [],
-  "autoReferenced": true,
-  "noEngineReferences": true
-}

@@ -377,7 +377,7 @@
     "baseline_apk_sha256": "c99fc3a5fd1fe24f80bc4e595a57ca6f4cd5e50c5c5c2cb7364d8ac64e0656ec"
   },
   "post_slim_release_build": "succeeded; isolated public dependency resolution with empty Gradle/Maven dependency caches",
-  "validated_apk_sha256": "41adf0173be7edde5d2d453f95de3d93a35a5e11cb85d1d505c579b02899d60a",
+  "validated_apk_sha256": "10fab235cf50a677ffb209178c295043005e3b99d77750a42e902d7182903bb4",
   "validation": {
     "shared_space": true,
     "before_after_native_sha256_match": true,
@@ -387,6 +387,7 @@
     "il2cpp_compilation_skipped": true,
     "zipalign": true,
     "page_size_policy": "warn",
-    "all_libraries_16kb_aligned": false
+    "all_libraries_16kb_aligned": false,
+    "gradle_only_repository_root_build": true
   }
 }
